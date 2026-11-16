@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cloud storefront on AWS, Aniket Karkala</title>
+<meta name="description" content="A demo shop and the cloud design to host it.">
+<!-- Keeps the site out of search engines while it is unlisted. Remove from build.py when you launch. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1B0E2E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B0E2E'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23E9B949'/%3E%3Ccircle cx='16' cy='16' r='3.6' fill='%231B0E2E'/%3E%3C/svg%3E">
+<link rel="preload" href="../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bar" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
+<nav class="nav" aria-label="Main"><a href="../index.html" class=brand aria-label=Home>AK</a><a href="../projects.html" aria-current=page>Projects</a><a href="../teaching.html">Teaching</a><a href="../about.html">About</a><a href="../index.html#contact">Contact</a></nav>
+<main id="main">
+<header class="proj-hero">
+  <div>
+    <a class="crumb" href="../projects.html">&#8592; All projects</a>
+    <h1 style="view-transition-name:c-aws-storefront">Cloud storefront on AWS</h1>
+    <p class="lead" data-r>A demo shop and the cloud design to host it.</p>
+    <div class="meta" data-r style="--d:1"><span class="pill gold">Internship, Reliance Jio</span><span class="pill"><span class="scale small" aria-hidden="true"><i></i><i></i><i></i></span>Small project</span><span class="pill">Software and networks</span></div>
+  </div>
+  <div class="stack" aria-hidden="true"><div class="stack-in"><div class="plate p0" style="--k:-1"><b>Inputs</b><span>Shopper actions</span></div><div class="plate p1" style="--k:0"><b>Core</b><span>EC2</span><span>Lambda</span><span>DynamoDB</span></div><div class="plate p2" style="--k:1"><b>Outputs</b><span>S3 static storage</span><span>Working cart</span></div></div></div>
+</header>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">The problem.</h2>
+  <p class="lead" style="max-width:38ch" data-r>A working cart is the smallest thing that needs a server, a database and file storage together.</p>
+</div></section>
+
+<section class="sec tight">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">What is inside.</h2>
+  <div class="flow"><i class="wire" aria-hidden="true"></i><div data-r style="--d:0"><h3>Inputs</h3><ul><li>Shopper actions</li></ul></div><div data-r style="--d:1"><h3>Core</h3><ul><li>EC2</li><li>Lambda</li><li>DynamoDB</li></ul></div><div data-r style="--d:2"><h3>Outputs</h3><ul><li>S3 static storage</li><li>Working cart</li></ul></div></div>
+</section>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">How it works.</h2>
+  <ol class="steps"><li data-r style="--d:0">A demo shop with add-to-cart was written in HTML, CSS and JavaScript.</li><li data-r style="--d:1">The proposed hosting put the site on EC2, the cart in DynamoDB behind Lambda functions, and static files in S3.</li></ol>
+</div></section>
+
+
+
+<nav class="nextprev" aria-label="More projects">
+  <a href="backtesting-framework.html"><small>Previous</small><b>Backtesting framework</b></a>
+  <a href="bakery-order-system.html"><small>Next</small><b>Bakery order system</b></a>
+</nav>
+</main>
+<footer>
+  <span>Aniket Karkala, Mumbai</span>
+  <span><a href="mailto:karkalaaniket@gmail.com">Email</a> &nbsp; <a href="https://www.linkedin.com/in/aniket-karkala" rel="noopener">LinkedIn</a> &nbsp; <a href="https://github.com/Aniket-Karkala" rel="noopener">GitHub</a></span>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

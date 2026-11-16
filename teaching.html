@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teaching, Aniket Karkala</title>
+<meta name="description" content="Courses, workshops and handbooks Aniket Karkala has written for school students.">
+<!-- Keeps the site out of search engines while it is unlisted. Remove from build.py when you launch. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1B0E2E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B0E2E'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23E9B949'/%3E%3Ccircle cx='16' cy='16' r='3.6' fill='%231B0E2E'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bar" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
+<nav class="nav" aria-label="Main"><a href="index.html" class=brand aria-label=Home>AK</a><a href="projects.html">Projects</a><a href="teaching.html" aria-current=page>Teaching</a><a href="about.html">About</a><a href="index.html#contact">Contact</a></nav>
+<main id="main">
+<header class="page-head">
+  <h1 class="sec-head" style="max-width:none">Teaching is half the job.</h1>
+  <p class="lead" data-r>I mentor school students from Grade 4 to Grade 10. Every course below was written for real sessions and rewritten after them.</p>
+</header>
+
+<section class="sec tight">
+  <h2 class="sec-head">One day, twelve modules.</h2>
+  <p data-r>ESP32 Fundamentals is a full-day, hands-on workshop for Grade 10 students. It comes with a mentor handbook, an 81-slide student deck, a quiz after each module and a 20-question final. One pin map is used all day, so circuits build up on a single breadboard instead of being torn down between modules.</p>
+  <ol class="modules" style="margin-top:28px"><li data-r style="--d:0"><b>Meet the microcontroller</b><span>What a microcontroller is and a tour of the board.</span></li><li data-r style="--d:1"><b>Set up the Arduino IDE</b><span>Install, select the board, upload the first sketch.</span></li><li data-r style="--d:2"><b>Digital output</b><span>Blink, LED chaser, traffic light and a binary counter.</span></li><li data-r style="--d:3"><b>Digital input</b><span>Buttons, pull-ups, debouncing and a reaction-time game.</span></li><li data-r style="--d:0"><b>Sound</b><span>Buzzer tones and programming a melody.</span></li><li data-r style="--d:1"><b>Analog input</b><span>Potentiometer, light sensor and hysteresis.</span></li><li data-r style="--d:2"><b>PWM and colour</b><span>Dimming and mixing colours on an RGB LED.</span></li><li data-r style="--d:3"><b>Sensors</b><span>Capacitive touch, temperature and humidity, ultrasonic distance.</span></li><li data-r style="--d:0"><b>Doing two things at once</b><span>Timing with millis() and simple state machines.</span></li><li data-r style="--d:1"><b>Interrupts</b><span>Reacting to events the moment they happen.</span></li><li data-r style="--d:2"><b>Wi-Fi dashboard</b><span>A web server on the board, in access-point mode.</span></li><li data-r style="--d:3"><b>Capstone build</b><span>Students pick a project from a menu and are graded on a rubric.</span></li></ol>
+</section>
+
+<section class="sec tight">
+  <h2 class="sec-head">Forty hours, fifteen projects.</h2>
+  <p data-r>A one-to-one electronics course for a Grade 8 student who already knew basic C. It runs on ESP32-S3 and ESP32-C3 boards and comes with a 28-slide student guide and a mentor's reference with annotated code and wiring diagrams for every project.</p>
+  <div class="tiers" style="margin-top:28px">
+    <article class="tilt" data-r><span class="big">8</span><h3>foundation projects</h3><ul><li>NeoPixel animations</li><li>Native USB</li><li>Bluetooth beacons</li><li>Deep sleep</li><li>MQTT messaging</li><li>Over-the-air updates</li><li>Capacitive touch piano</li><li>Bluetooth proximity</li></ul></article>
+    <article class="tilt" data-r style="--d:1"><span class="big">4</span><h3>intermediate projects</h3><ul><li>Gesture-controlled display</li><li>Bluetooth mesh network</li><li>USB keyboard emulation</li><li>WebSocket dashboard</li></ul></article>
+    <article class="tilt" data-r style="--d:2"><span class="big">3</span><h3>capstone options</h3><ul><li>Hand-sign detection</li><li>Security camera with phone alerts</li><li>Bluetooth health band</li></ul></article>
+  </div>
+</section>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">Handbooks for the youngest builders.</h2>
+  <div>
+    <p class="lead" style="max-width:36ch" data-r>For a World Robot Olympiad build I wrote two books for Grade 4 and 5 students.</p>
+    <p data-r style="--d:1">The first is a 20-chapter general volume with a custom diagram for every module, story dialogue, quick-fact tables and mini quizzes. The second is a 25-page deep-dive that explains the real values in the team's own firmware: bus speeds, RFID frequency, servo pulse counts and timing constants.</p>
+    <div class="btns" data-r style="--d:2"><a class="btn magnet" href="projects/smart-temple.html">See the Smart Temple project</a></div>
+  </div>
+</div></section>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">How I run a project.</h2>
+  <ul class="notes">
+    <li data-r>One sensor at a time. Every part is tested alone on the bench before anything is integrated.</li>
+    <li data-r style="--d:1">Real data early. Students log readings by hand first, so they know what a number means before code hides it.</li>
+    <li data-r style="--d:2">Hours, not dates. Research projects are planned as hour budgets with gates, because school calendars slip.</li>
+    <li data-r style="--d:3">Honest claims. A screening tool is called a screening tool, and limits go in the report.</li>
+  </ul>
+</div></section>
+
+<section class="sec contact" id="contact">
+  <h2 class="sec-head">Have something to build?</h2>
+  <p data-r>Projects, workshops, mentoring, or a sensor that won't behave. Write to me.</p>
+  <a class="mail" href="mailto:karkalaaniket@gmail.com" data-r>karkalaaniket@gmail.com</a>
+  <div class="btns" data-r>
+    <a class="btn magnet" href="https://www.linkedin.com/in/aniket-karkala" rel="noopener">LinkedIn</a>
+    <a class="btn magnet" href="https://github.com/Aniket-Karkala" rel="noopener">GitHub</a>
+  </div>
+  <canvas id="scope" aria-hidden="true"></canvas>
+</section>
+</main>
+<footer>
+  <span>Aniket Karkala, Mumbai</span>
+  <span><a href="mailto:karkalaaniket@gmail.com">Email</a> &nbsp; <a href="https://www.linkedin.com/in/aniket-karkala" rel="noopener">LinkedIn</a> &nbsp; <a href="https://github.com/Aniket-Karkala" rel="noopener">GitHub</a></span>
+</footer>
+<script src="js/site.js"></script>
+</body>
+</html>

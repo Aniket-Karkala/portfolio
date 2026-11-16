@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Water quality monitor, Aniket Karkala</title>
+<meta name="description" content="A battery-powered probe set for turbidity, pH, dissolved solids and temperature.">
+<!-- Keeps the site out of search engines while it is unlisted. Remove from build.py when you launch. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1B0E2E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B0E2E'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23E9B949'/%3E%3Ccircle cx='16' cy='16' r='3.6' fill='%231B0E2E'/%3E%3C/svg%3E">
+<link rel="preload" href="../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bar" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
+<nav class="nav" aria-label="Main"><a href="../index.html" class=brand aria-label=Home>AK</a><a href="../projects.html" aria-current=page>Projects</a><a href="../teaching.html">Teaching</a><a href="../about.html">About</a><a href="../index.html#contact">Contact</a></nav>
+<main id="main">
+<header class="proj-hero">
+  <div>
+    <a class="crumb" href="../projects.html">&#8592; All projects</a>
+    <h1 style="view-transition-name:c-water-quality-monitor">Water quality monitor</h1>
+    <p class="lead" data-r>A battery-powered probe set for turbidity, pH, dissolved solids and temperature.</p>
+    <div class="meta" data-r style="--d:1"><span class="pill gold">Mentored build</span><span class="pill"><span class="scale mid" aria-hidden="true"><i></i><i></i><i></i></span>Mid-size project</span><span class="pill">Sensing</span></div>
+  </div>
+  <div class="stack" aria-hidden="true"><div class="stack-in"><div class="plate p0" style="--k:-1"><b>Inputs</b><span>Turbidity sensor</span><span>pH sensor</span><span>TDS sensor</span><span>DS18B20 temperature probe</span></div><div class="plate p1" style="--k:0"><b>Core</b><span>ESP32 DevKit</span><span>Temperature compensation</span></div><div class="plate p2" style="--k:1"><b>Outputs</b><span>NeoPixel status LED</span><span>18650 cell with 5 V boost</span></div></div></div>
+</header>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">The problem.</h2>
+  <p class="lead" style="max-width:38ch" data-r>Cheap water sensors are easy to buy and easy to wire wrongly. Most output more voltage than an ESP32 pin can survive.</p>
+</div></section>
+
+<section class="sec tight">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">What is inside.</h2>
+  <div class="flow"><i class="wire" aria-hidden="true"></i><div data-r style="--d:0"><h3>Inputs</h3><ul><li>Turbidity sensor</li><li>pH sensor</li><li>TDS sensor</li><li>DS18B20 temperature probe</li></ul></div><div data-r style="--d:1"><h3>Core</h3><ul><li>ESP32 DevKit</li><li>Temperature compensation</li></ul></div><div data-r style="--d:2"><h3>Outputs</h3><ul><li>NeoPixel status LED</li><li>18650 cell with 5 V boost</li></ul></div></div>
+</section>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">How it works.</h2>
+  <ol class="steps"><li data-r style="--d:0">Turbidity and pH sensors feed the ESP32 through resistor dividers.</li><li data-r style="--d:1">A dissolved-solids sensor and a waterproof temperature probe work together, so the reading is corrected for temperature.</li><li data-r style="--d:2">A single lithium cell is boosted to 5 V for the sensors.</li><li data-r style="--d:3">One status LED shows the state at a glance.</li></ol>
+</div></section>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">What I learned building it.</h2>
+  <ul class="notes"><li data-r style="--d:0">All analog sensors sit on ADC1, because ADC2 stops working when Wi-Fi is on.</li><li data-r style="--d:1">The firmware multiplies each divided reading by 1.5 to recover the true sensor voltage.</li></ul>
+</div></section>
+
+<nav class="nextprev" aria-label="More projects">
+  <a href="body-tracker.html"><small>Previous</small><b>Four-IMU body tracker</b></a>
+  <a href="folding-mast.html"><small>Next</small><b>Folding-mast sensor head</b></a>
+</nav>
+</main>
+<footer>
+  <span>Aniket Karkala, Mumbai</span>
+  <span><a href="mailto:karkalaaniket@gmail.com">Email</a> &nbsp; <a href="https://www.linkedin.com/in/aniket-karkala" rel="noopener">LinkedIn</a> &nbsp; <a href="https://github.com/Aniket-Karkala" rel="noopener">GitHub</a></span>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

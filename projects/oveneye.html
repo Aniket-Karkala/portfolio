@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OvenEye, Aniket Karkala</title>
+<meta name="description" content="A clip-on camera that tells you when the bake is done.">
+<!-- Keeps the site out of search engines while it is unlisted. Remove from build.py when you launch. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1B0E2E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B0E2E'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23E9B949'/%3E%3Ccircle cx='16' cy='16' r='3.6' fill='%231B0E2E'/%3E%3C/svg%3E">
+<link rel="preload" href="../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bar" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
+<nav class="nav" aria-label="Main"><a href="../index.html" class=brand aria-label=Home>AK</a><a href="../projects.html" aria-current=page>Projects</a><a href="../teaching.html">Teaching</a><a href="../about.html">About</a><a href="../index.html#contact">Contact</a></nav>
+<main id="main">
+<header class="proj-hero">
+  <div>
+    <a class="crumb" href="../projects.html">&#8592; All projects</a>
+    <h1 style="view-transition-name:c-oveneye">OvenEye</h1>
+    <p class="lead" data-r>A clip-on camera that tells you when the bake is done.</p>
+    <div class="meta" data-r style="--d:1"><span class="pill gold">Own build</span><span class="pill"><span class="scale mid" aria-hidden="true"><i></i><i></i><i></i></span>Mid-size project</span><span class="pill">Sensing</span></div>
+  </div>
+  <div class="stack" aria-hidden="true"><div class="stack-in"><div class="plate p0" style="--k:-1"><b>Inputs</b><span>OV2640 camera</span><span>White reference tile</span></div><div class="plate p1" style="--k:0"><b>Core</b><span>XIAO ESP32-S3 Sense</span><span>Browning index</span><span>ETA regression</span></div><div class="plate p2" style="--k:1"><b>Outputs</b><span>Self-hosted Wi-Fi dashboard</span><span>Time-to-done estimate</span></div></div></div>
+</header>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">The problem.</h2>
+  <p class="lead" style="max-width:38ch" data-r>Opening the oven door to check a bake drops the temperature, and timers do not know what the food looks like.</p>
+</div></section>
+
+<section class="sec tight">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">What is inside.</h2>
+  <div class="flow"><i class="wire" aria-hidden="true"></i><div data-r style="--d:0"><h3>Inputs</h3><ul><li>OV2640 camera</li><li>White reference tile</li></ul></div><div data-r style="--d:1"><h3>Core</h3><ul><li>XIAO ESP32-S3 Sense</li><li>Browning index</li><li>ETA regression</li></ul></div><div data-r style="--d:2"><h3>Outputs</h3><ul><li>Self-hosted Wi-Fi dashboard</li><li>Time-to-done estimate</li></ul></div></div>
+</section>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">How it works.</h2>
+  <ol class="steps"><li data-r style="--d:0">A camera pod hangs from the oven door handle and looks through the window.</li><li data-r style="--d:1">A browning index is computed from pixel brightness, normalised against a white ceramic tile placed inside the oven.</li><li data-r style="--d:2">A straight-line fit over the last six frames predicts the time left to the target colour.</li><li data-r style="--d:3">The board serves its own Wi-Fi dashboard with snapshots and live readings.</li></ol>
+</div></section>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">What I learned building it.</h2>
+  <ul class="notes"><li data-r style="--d:0">No machine learning is involved. The index is arithmetic and the estimate is a least-squares fit.</li><li data-r style="--d:1">The mount is a three-part PETG pendant: a clamp on the handle, an arm, and the camera pod. Nothing rests on the glass.</li><li data-r style="--d:2">A soft lip on the shroud blocks room reflections, with a vent notch so heat cannot build up.</li><li data-r style="--d:3">The parts list comes to about ₹2,900.</li></ul>
+</div></section>
+
+<nav class="nextprev" aria-label="More projects">
+  <a href="electronic-nose.html"><small>Previous</small><b>Electronic nose for bananas</b></a>
+  <a href="smart-pet-feeder.html"><small>Next</small><b>Smart pet feeder</b></a>
+</nav>
+</main>
+<footer>
+  <span>Aniket Karkala, Mumbai</span>
+  <span><a href="mailto:karkalaaniket@gmail.com">Email</a> &nbsp; <a href="https://www.linkedin.com/in/aniket-karkala" rel="noopener">LinkedIn</a> &nbsp; <a href="https://github.com/Aniket-Karkala" rel="noopener">GitHub</a></span>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

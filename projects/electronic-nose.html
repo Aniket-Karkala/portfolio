@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electronic nose for bananas, Aniket Karkala</title>
+<meta name="description" content="Smelling the difference between natural and artificial ripening.">
+<!-- Keeps the site out of search engines while it is unlisted. Remove from build.py when you launch. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1B0E2E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B0E2E'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23E9B949'/%3E%3Ccircle cx='16' cy='16' r='3.6' fill='%231B0E2E'/%3E%3C/svg%3E">
+<link rel="preload" href="../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bar" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
+<nav class="nav" aria-label="Main"><a href="../index.html" class=brand aria-label=Home>AK</a><a href="../projects.html" aria-current=page>Projects</a><a href="../teaching.html">Teaching</a><a href="../about.html">About</a><a href="../index.html#contact">Contact</a></nav>
+<main id="main">
+<header class="proj-hero">
+  <div>
+    <a class="crumb" href="../projects.html">&#8592; All projects</a>
+    <h1 style="view-transition-name:c-electronic-nose">Electronic nose for bananas</h1>
+    <p class="lead" data-r>Smelling the difference between natural and artificial ripening.</p>
+    <div class="meta" data-r style="--d:1"><span class="pill gold">Own build</span><span class="pill"><span class="scale mid" aria-hidden="true"><i></i><i></i><i></i></span>Mid-size project</span><span class="pill">Sensing</span></div>
+  </div>
+  <div class="stack" aria-hidden="true"><div class="stack-in"><div class="plate p0" style="--k:-1"><b>Inputs</b><span>MQ-3 gas sensor</span><span>MQ-135 gas sensor</span><span>ADS1115 16-bit ADC</span></div><div class="plate p1" style="--k:0"><b>Core</b><span>ESP32</span><span>Calibration and ppm maths</span></div><div class="plate p2" style="--k:1"><b>Outputs</b><span>Serial data log</span><span>Ripeness comparison</span></div></div></div>
+</header>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">The problem.</h2>
+  <p class="lead" style="max-width:38ch" data-r>Bananas ripened with chemical agents are sold as naturally ripened. The gases a banana gives off carry part of the story.</p>
+</div></section>
+
+<section class="sec tight">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">What is inside.</h2>
+  <div class="flow"><i class="wire" aria-hidden="true"></i><div data-r style="--d:0"><h3>Inputs</h3><ul><li>MQ-3 gas sensor</li><li>MQ-135 gas sensor</li><li>ADS1115 16-bit ADC</li></ul></div><div data-r style="--d:1"><h3>Core</h3><ul><li>ESP32</li><li>Calibration and ppm maths</li></ul></div><div data-r style="--d:2"><h3>Outputs</h3><ul><li>Serial data log</li><li>Ripeness comparison</li></ul></div></div>
+</section>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">How it works.</h2>
+  <ol class="steps"><li data-r style="--d:0">An MQ-3 follows ethanol, a by-product of ripening, and an MQ-135 follows ammonia and other volatiles.</li><li data-r style="--d:1">Both are read through a 16-bit ADC into an ESP32.</li><li data-r style="--d:2">Raw readings are converted to a resistance ratio and then to concentration using curve constants checked against the datasheets.</li><li data-r style="--d:3">Bench runs on raw and ripe bananas provide the comparison data.</li></ol>
+</div></section>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">What I learned building it.</h2>
+  <ul class="notes"><li data-r style="--d:0">Two firmware bugs were found and fixed: the clean-air calibration was off by a factor of 60 for one sensor, and the concentration equation was inverted.</li><li data-r style="--d:1">The sensors output up to 5 V, so each analog line needs a divider before a 3.3 V input.</li><li data-r style="--d:2">Humidity shifts these sensors more than anything else, which matters in Mumbai.</li><li data-r style="--d:3">The build became a two-hour student session with a worksheet built from real bench data.</li></ul>
+</div></section>
+
+<nav class="nextprev" aria-label="More projects">
+  <a href="ripening-scan-box.html"><small>Previous</small><b>Ripening scan box</b></a>
+  <a href="oveneye.html"><small>Next</small><b>OvenEye</b></a>
+</nav>
+</main>
+<footer>
+  <span>Aniket Karkala, Mumbai</span>
+  <span><a href="mailto:karkalaaniket@gmail.com">Email</a> &nbsp; <a href="https://www.linkedin.com/in/aniket-karkala" rel="noopener">LinkedIn</a> &nbsp; <a href="https://github.com/Aniket-Karkala" rel="noopener">GitHub</a></span>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CNC Writer Studio, Aniket Karkala</title>
+<meta name="description" content="A pen plotter you drive from a phone: type, draw, or teach it your handwriting.">
+<!-- Keeps the site out of search engines while it is unlisted. Remove from build.py when you launch. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1B0E2E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B0E2E'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23E9B949'/%3E%3Ccircle cx='16' cy='16' r='3.6' fill='%231B0E2E'/%3E%3C/svg%3E">
+<link rel="preload" href="../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bar" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
+<nav class="nav" aria-label="Main"><a href="../index.html" class=brand aria-label=Home>AK</a><a href="../projects.html" aria-current=page>Projects</a><a href="../teaching.html">Teaching</a><a href="../about.html">About</a><a href="../index.html#contact">Contact</a></nav>
+<main id="main">
+<header class="proj-hero">
+  <div>
+    <a class="crumb" href="../projects.html">&#8592; All projects</a>
+    <h1 style="view-transition-name:c-cnc-writer-studio">CNC Writer Studio</h1>
+    <p class="lead" data-r>A pen plotter you drive from a phone: type, draw, or teach it your handwriting.</p>
+    <div class="meta" data-r style="--d:1"><span class="pill gold">Mentored build</span><span class="pill"><span class="scale large" aria-hidden="true"><i></i><i></i><i></i></span>Large project</span><span class="pill">Robotics and play</span></div>
+  </div>
+  <div class="stack" aria-hidden="true"><div class="stack-in"><div class="plate p0" style="--k:-1"><b>Inputs</b><span>Phone dashboard</span><span>Handwriting capture</span><span>Typed or dictated text</span></div><div class="plate p1" style="--k:0"><b>Core</b><span>ESP32-S3 (dashboard, streaming)</span><span>Arduino Uno + GRBL (motion)</span></div><div class="plate p2" style="--k:1"><b>Outputs</b><span>Two stepper axes</span><span>Pen-lift servo</span><span>CNC Shield V3</span></div></div></div>
+</header>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">The problem.</h2>
+  <p class="lead" style="max-width:38ch" data-r>Hobby pen plotters normally need a PC running sender software and G-code prepared in advance. This one only needs a phone on its Wi-Fi.</p>
+</div></section>
+
+<section class="sec tight">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">What is inside.</h2>
+  <div class="flow"><i class="wire" aria-hidden="true"></i><div data-r style="--d:0"><h3>Inputs</h3><ul><li>Phone dashboard</li><li>Handwriting capture</li><li>Typed or dictated text</li></ul></div><div data-r style="--d:1"><h3>Core</h3><ul><li>ESP32-S3 (dashboard, streaming)</li><li>Arduino Uno + GRBL (motion)</li></ul></div><div data-r style="--d:2"><h3>Outputs</h3><ul><li>Two stepper axes</li><li>Pen-lift servo</li><li>CNC Shield V3</li></ul></div></div>
+</section>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">How it works.</h2>
+  <ol class="steps"><li data-r style="--d:0">An Arduino Uno with a CNC shield runs GRBL and owns every step pulse.</li><li data-r style="--d:1">An ESP32-S3 hosts the Wi-Fi dashboard and streams G-code to the Uno through a ring-buffered queue.</li><li data-r style="--d:2">The dashboard captures a person&#x27;s handwriting and stores it as a profile in flash, so the plotter can write in that hand.</li><li data-r style="--d:3">Fourteen built-in image patterns can be drawn without any external software.</li><li data-r style="--d:4">A servo lifts and lowers the pen.</li></ol>
+</div></section>
+
+<section class="sec tight"><div class="two">
+  <h2 class="sec-head" style="font-size:clamp(1.9rem,4vw,3.2rem)">What I learned building it.</h2>
+  <ul class="notes"><li data-r style="--d:0">Motion stays on GRBL on purpose. The ESP32 never generates step pulses.</li><li data-r style="--d:1">A single JavaScript syntax error leaves every dashboard button dead while the wiring looks guilty. The dashboard now has automated tests that run before each release.</li><li data-r style="--d:2">The Uno transmits at 5 V, so its line reaches the 3.3 V ESP32 through a divider.</li></ul>
+</div></section>
+
+<nav class="nextprev" aria-label="More projects">
+  <a href="sensing-cane.html"><small>Previous</small><b>Sensing cane</b></a>
+  <a href="sitsense.html"><small>Next</small><b>SitSense</b></a>
+</nav>
+</main>
+<footer>
+  <span>Aniket Karkala, Mumbai</span>
+  <span><a href="mailto:karkalaaniket@gmail.com">Email</a> &nbsp; <a href="https://www.linkedin.com/in/aniket-karkala" rel="noopener">LinkedIn</a> &nbsp; <a href="https://github.com/Aniket-Karkala" rel="noopener">GitHub</a></span>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>
